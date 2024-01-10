@@ -1,6 +1,6 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
-const ElevatedCards = () => {
+const ElevatedCards = (): JSX.Element => {
   return (
     <View>
       <Text style={styles.headingText}>Elevated Cards</Text>

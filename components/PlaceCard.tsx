@@ -1,17 +1,17 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
-const PlaceCard = () => {
+const PlaceCard = (): JSX.Element => {
   return (
     <View>
       <Text style={styles.headingText}>Popular Places</Text>
-      <View>
+      <View style={styles.card}>
         <Image
           source={{
-            uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQQZA8s3i80S9sJnQwPMBucnYOuPjOsPWuuWKP272agfS60vRU_0o1Vzv_6W03OySwua1OyWOjO2wlK9hVL2lz',
+            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--iMisenzQVj-MDzXLG04JD87fJ1wag5s0R0qtiM_Oc1DzuUexTJKritc7cGXDbqDfA0&usqp=CAU',
           }}
           style={styles.cardImg}
         />
-        <View>
+        <View style={styles.cardBody}>
           <Text style={styles.title}>Eiffel Tower</Text>
           <Text style={styles.label}>7th arrondissement, Paris, France</Text>
           <Text style={styles.description}>
@@ -34,18 +34,41 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 8,
   },
+  card: {
+    marginHorizontal: 14,
+    marginVertical: 12,
+    height: 360,
+    backgroundColor: '#000',
+    borderRadius: 8,
+    elevation: 4,
+    shadowColor: '#ccc',
+    shadowOffset: {
+      height: 1,
+      width: 1,
+    },
+  },
   cardImg: {
-    height: 180,
-    width: 180,
+    height: 200,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
+  cardBody: {
+    paddingHorizontal: 8,
   },
   title: {
     fontSize: 20,
     fontWeight: '600',
+    color: '#fff',
+    marginTop: 12,
+    marginBottom: 6,
   },
   label: {
     fontSize: 16,
+    color: '#fff',
   },
   description: {
     fontSize: 14,
+    color: '#ccc',
+    marginTop: 12,
   },
 });
